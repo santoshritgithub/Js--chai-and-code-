@@ -1,0 +1,11 @@
+let arr= ["hello","Ashis","nalayak"];
+for (const val of arr) {
+    // console.log(val);
+}
+const greeting = "Hello sir";
+for (const great of greeting) {
+    if(great==" "){
+        continue;
+    }
+    console.log(`Each character is : ${great}`);
+}
