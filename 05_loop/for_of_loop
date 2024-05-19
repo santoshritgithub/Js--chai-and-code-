@@ -1,3 +1,11 @@
+// forof loop 
+
+// Note: forof use in basically to access 
+//                                1) ELement of array
+//                                2) In Map
+
+
+
 let arr= ["hello","Ashis","nalayak"];
 for (const val of arr) {
     // console.log(val);
@@ -7,5 +15,14 @@ for (const great of greeting) {
     if(great==" "){
         continue;
     }
-    console.log(`Each character is : ${great}`);
+    // console.log(`Each character is : ${great}`);
 }
+
+let map = new Map();
+map.set('IN','India');
+map.set('NP','Nepal');
+map.set('FR','France');
+for (const [val, key] of map) {
+    // console.log(val,":-",key);
+}
+
