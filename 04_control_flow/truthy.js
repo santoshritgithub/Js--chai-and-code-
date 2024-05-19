@@ -18,6 +18,6 @@ else{
 
 const obj={}
 if(Object.keys(obj).length==0){
-    console.log("yes empty");
+    console.log("Yes empty");
 
 }
