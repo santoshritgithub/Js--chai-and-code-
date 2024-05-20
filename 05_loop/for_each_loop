@@ -1,0 +1,19 @@
+//forEach loop
+
+let arr =["js","cpp","c#","java","css"];
+
+//way1
+arr.forEach (function (val){
+    // console.log(val);
+})
+
+//way2
+arr.forEach((val)=>{
+    // console.log(val);
+})
+
+//way3
+function print(val){
+    // console.log(val);
+}
+arr.forEach(print);
