@@ -30,7 +30,7 @@ let shopping_cart=[
         price:12999
     },
 ]
-// finding to course price using ***  reduce  ***
+// finding total course price using ***  reduce  ***
 // let totalprice= shopping_cart.reduce((acc, val)=> acc+val.price,0)
                             // Output =   26996                               
 let Total=0;
