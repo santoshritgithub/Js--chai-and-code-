@@ -13,25 +13,57 @@
     <h2>Lorem ipsum dolor  amet consectetur.</h2>
     <h2>Lorem ipsum sit amet consectetur.</h2>
     <p>Lorem ipsum dolor sit amet consectetur.</p> -->
-    <h2>Lorem ipsum sit amet consectetur.</h2>
+    <!-- <h2>Lorem ipsum sit amet consectetur.</h2> -->
+  
 
+    <div class="language">
+        <ul>
+            <li>javascript</li>
+        </ul>
+    </div>
     <script>
+
+        function addlan(languageName) {
+            const li= document.createElement("li");
+            li.innerHTML=`${languageName}`;
+            // document.querySelector(".language").appendChild(li);
+            // document.append(document.createTextNode(languageName))
+            document.querySelector('ul').appendChild(li)
+            
+        }
+         addlan("React");
+         addlan("Html");
+          
+        //changing 2 element by over_riding li
+
+         const lang = document.querySelector("li:nth-child(2)")
+        //  lang.innerHTML="C#";
+
+        //changing 2 element by creating new li
+        const newli = document.createElement('li');
+        newli.textContent="mojo";
+        lang.replaceWith(newli)
+        const last=document.querySelector("li:last-child")
+        last.remove();
+
+
         // alert("hello");
         // document.getElementById('title').innerHTML = "Change ho gya vai"
-        let div = document.createElement("div");
+        // let div = document.createElement("div");
         // console.log(div);
-        div.innerText="Hello Baby";
+        // div.innerText = "Hello Baby";
         // div.className="main train";
         // // div.className="train";
-        console.log(div);
-        document.body.appendChild(div);
-        
+        // console.log(div);
+        // document.body.appendChild(div);
+
         // // div.id="ray";
         // console.log(div);
         // // div.id="may";
         // console.log(div);
         // div.setAttribute("title","Hero");
         // div.setAttribute("id","Hero");
+
     </script>
 </body>
 
