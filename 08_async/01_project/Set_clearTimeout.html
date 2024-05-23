@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async</title>
+</head>
+<body>
+    <h1>Hello Async vaiya</h1>
+    <button id="stop">Stop</button>
+    <script>
+    //setTimeout 
+
+        // setTimeout(function(){
+        //     console.log("Santosh Babu aap hai");
+        // },2000)
+
+        //above function can also written as
+        const setTime = function (){
+            const display = document.querySelector('h1');
+            display.innerHTML = "Aawna baitho padhte hai.." //This will change the display h1 innetHTML after 2s
+            console.log("Santosh Babu aap hai");
+        }
+        const changeMe = setTimeout(setTime,2000) //Pass only reference of function
+
+    //clearTimeout
+     //clearTimeout(changeMe)               // only using this make the h1 same as it is  but to change event assign it into any queryselector
+    const button = document.getElementById('stop');
+    //This below event make the stop button on click before 2s unchangable of h1
+    button.addEventListener('click', function(){
+        clearTimeout(changeMe);
+        console.log("Stopped");
+    })
+
+    </script>
+</body>
+</html>
