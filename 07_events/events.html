@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+    <div>
+        <ul id="images">
+            <li>
+                <img src="https://images.pexels.com/photos/56866/garden-rose-red-pink-56866.jpeg?auto=compress&cs=tinysrgb&w=600" height="200px" width ="auto" alt="rose" id="Rose" /*onclick="alert('Rose')"*/>
+            </li>
+            <li>
+                <img src="https://images.pexels.com/photos/1324995/pexels-photo-1324995.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" height="200px" width ="auto" id="girl"  alt="girlWithRose">
+            </li>
+            <li>
+                <img src="https://img.freepik.com/free-photo/couple-holding-bright-red-rose-hands_23-2148019255.jpg" height="200px" width ="auto" id="hand" alt="hand and rose">
+            </li>
+        </ul>
+    </div>
+    <script>
+        
+       //To study about
+       // type, timestamp, defaultPrevented
+       // target, toElement, srcElement, currentTarget
+       // clientx, clienty, screenX, screenY
+       // altkey, ctrkey, shiftkeym keycode
+
+
+        //  document.getElementById('Rose').onclick= function(){
+        //     alert('Rose hai');
+        //  }
+       
+    //    document.getElementById('Rose').addEventListener('click',function(e){
+    //     alert('Firse rose dekha');
+    //     console.log(e);
+    //    }, false)
+    //    document.getElementById('images').addEventListener('click',function(){
+    //     alert('Clicked in ul');
+    //     // console.log(e);
+    //    }, false)
+
+     //what does false meaning
+     //Basically there is two type of event propagation occur
+     // first one is : bubbling :- which follow inside to outside denoted by writing   'False' as above 
+     // second one is : capturing :- which follow top to buttom and denoted by writing   'true' as below
+
+    //  document.getElementById('Rose').addEventListener('click',function(e){
+    //     // alert('Firse rose dekha');
+    //     console.log("firse rose");
+    //     e.stopPropagation();   ///to stop bubbling in programm
+    //    }, true)
+    //    document.getElementById('images').addEventListener('click',function(){
+    //     // alert('Clicked in ul');
+    //     console.log("cliked in ul");
+    //    }, false)
+
+  // click and remove images
+    document.querySelector('#images').addEventListener('click',function(e){
+        // console.log(e.target);
+        // console.log(e.target.parentNode);
+        // let removeIt = e.target.parentNode; //it will remove complete ul 
+        // removeIt.remove();
+        // removeIt.parentNode.removeChild(removeIt);
+
+
+        console.log(e.target.tagName);
+        if(e.target.tagName==='IMG'){
+            console.log(e.target.id);
+            let removeIt = e.target.parentNode;
+            removeIt.remove();
+        }
+    })
+
+</script>
+</body>
+</html>
