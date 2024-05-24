@@ -22,7 +22,6 @@ function User(username, visited, count){
     return this
 }
 
-
 const visitor1 =new User("Ashwin", true, 45)
 const visitor2 =new User("Santosh", false, 23)
 console.log(visitor2)
