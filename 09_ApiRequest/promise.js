@@ -67,26 +67,51 @@
 
 
 ////Way five
-const promisefive = new Promise((resolve, reject)=>{
-    let error = false;
-    if(!error){
-        resolve({
-            username:"Javascript",
-             Password:"js123"
-        })
-    }else{
-        reject("ERROR: javascript fail to execute")
-    }
-})
-async function promisefiveId(){
-    try {
-        const identify = await promisefive
-        console.log(identify)
+// const promisefive = new Promise((resolve, reject)=>{
+//     let error = false;
+//     if(!error){
+//         resolve({
+//             username:"Javascript",
+//              Password:"js123"
+//         })
+//     }else{
+//         reject("ERROR: javascript fail to execute")
+//     }
+// })
+// async function promisefiveId(){
+//     try {
+//         const identify = await promisefive
+//         console.log(identify)
         
-    } catch (error) {
-        console.log(error)
-    }
-}
-promisefiveId().finally(()=>{
-    console.log("Js promise is executed")
-});
+//     } catch (error) {
+//         console.log(error)
+//     }
+// }
+// promisefiveId().finally(()=>{
+//     console.log("Js promise is executed")
+// });
+
+//Displaying of data of any API using fetch with try and catch
+// async function Allusers(){
+//     try {
+//         const display = await fetch('https://api.github.com/users/santoshritgithub')
+//         // console.log(display);
+//         const data = await display.json()
+//         console.log(data)
+//     } catch (error) {
+//         console.log('E: ', error);
+//     }
+// }
+// Allusers();
+
+//Displaying same thing using .then & .catch
+fetch('https://api.github.com/users/santoshritgithub')
+.then((response)=>{
+   return response.json();
+})
+.then((data)=>{
+   console.log(data)
+})
+.catch((error)=>{
+    console.log("E: ",error)
+})
