@@ -15,3 +15,5 @@ object literals
 - prototypes
 - classes 
 - Instances(new, this )
+
+## class

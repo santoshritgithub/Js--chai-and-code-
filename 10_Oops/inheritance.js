@@ -26,3 +26,4 @@ String.prototype.trueLength = function(){
 }
 name.trueLength();
 "Abdul   ".trueLength();
+" Ashwin  ".trueLength();
