@@ -18,8 +18,8 @@
 //slice and splice
 let Array = [2,1,4,6,8];
 let val= Array.slice(1,3);
-console.log(Array);
 console.log(val);
+console.log(Array);
 
 let val2= Array.splice(1,3);
 console.log(Array);
